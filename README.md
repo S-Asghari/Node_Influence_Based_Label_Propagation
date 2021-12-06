@@ -3,7 +3,7 @@ A Node Influence Based Label Propagation Algorithm for Community Detection in Ne
 
 "Description of NIBLPA algorithm"
 
-Although this algorithm works like general LPA, there are some differences:
+Although this algorithm works like general LPA, there are some differences: <br />
 LPA: <br />
     -Puts nodes in a list(called X) using a random function. <br />
     -For each node, selects a label which has the most frequency in the node's neighborhood and assigns it as the node's new label. <br />
