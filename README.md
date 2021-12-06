@@ -19,16 +19,16 @@ Although this algorithm works like general LPA, there are some differences: <br 
     
 ## A brief explaination for methods used in the NIBLPA code <br />
 
-    - **Begin:** Assigns a unique label to each node. <br />
-    - **findKS:** Calculates the k value for each node and puts them in an array called KS. <br />
-    - **findNI:** Calculates the NI value for each node by the formula written in the article. <br />
-    (**Notice:** <br />
-    N(i) in the formula means the set of nodes which are neighbours to node i. <br />
-    d(j) means degree of node j. <br />
-    ∝ is a constant value between 0 and 1 that can be assigned in the begining of code execution by the user. Its value can influence the result!) <br />
-    - **Merge & sort:** Implementation of merge-sort algorithm in order to sort vector X <br />
-    - **sortX:** Sorts the nodes in decreasing order of their NI value <br />
-    - **calculateMaxLI:** For each node of the graph, calculates the LI value by the formula written in the article. <br />
-    - **updateLabels:** For the condition when there are more than one label with the most frequency for a node, this method calls calculateMaxLI and chooses the label with the most LI value. <br />
-    - **divideCommunity:** At the end of the algorithm when the labels will not change any more, nodes with same label will be located in one community implemented by hashSet.Also, "Result" is a vector of vector variable which is filled in this method and in each vector of it, all the nodes with the same label are gathered together. <br />
-    - **detectCommunity:** By calling this method, the whole NIBLPA algorithm will run in order and step by step. <br />
+   - **Begin:** Assigns a unique label to each node. <br />
+   - **findKS:** Calculates the k value for each node and puts them in an array called KS. <br />
+   - **findNI:** Calculates the NI value for each node by the formula written in the article. <br />
+   (**Notice:** <br />
+   N(i) in the formula means the set of nodes which are neighbours to node i. <br />
+   d(j) means degree of node j. <br />
+   ∝ is a constant value between 0 and 1 that can be assigned in the begining of code execution by the user. Its value can influence the result!) <br />
+   - **Merge & sort:** Implementation of merge-sort algorithm in order to sort vector X <br />
+   - **sortX:** Sorts the nodes in decreasing order of their NI value <br />
+   - **calculateMaxLI:** For each node of the graph, calculates the LI value by the formula written in the article. <br />
+   - **updateLabels:** For the condition when there are more than one label with the most frequency for a node, this method calls calculateMaxLI and chooses the label with the most LI value. <br />
+   - **divideCommunity:** At the end of the algorithm when the labels will not change any more, nodes with same label will be located in one community implemented by hashSet.Also, "Result" is a vector of vector variable which is filled in this method and in each vector of it, all the nodes with the same label are gathered together. <br />
+   - **detectCommunity:** By calling this method, the whole NIBLPA algorithm will run in order and step by step. <br />
