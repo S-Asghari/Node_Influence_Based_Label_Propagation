@@ -5,16 +5,16 @@ A Node Influence Based Label Propagation Algorithm for Community Detection in Ne
 
 Although this algorithm works like general LPA, there are some differences: <br />
 **LPA:** <br />
-    - Puts nodes in a list(called X) using a random function. <br />
-    - For each node, selects a label which has the most frequency in the node's neighborhood and assigns it as the node's new label. <br />
-    - If there are more than one label with the most frequency for a node, LPA chooses one of them randomly. <br />
+   - Puts nodes in a list(called X) using a random function. <br />
+   - For each node, selects a label which has the most frequency in the node's neighborhood and assigns it as the node's new label. <br />
+   - If there are more than one label with the most frequency for a node, LPA chooses one of them randomly. <br />
 
 **NIBLPA:** <br />
-    - Sorts the nodes in a vector by their NI value(NI is obtained by KS value) <br />
-    - KS definition: It is assigned a k value to each node of the graph. Each node is located in a connected subgraph called k-shell in which each node has a minimum degree of k and can not be in a (k+1)-shell. <br />
-    - To calculate k value for each node, NIBLPA begins from KS = 0 and the value is increased one unit level by level. In each level, edges of nodes with maximum degree of KS are removed. Each node's k value equals to the value of KS at a level the node has lost its last edge. This process will continue untill all edges are removed. <br />
-    - NIBLPA works just like LPA in assigning labels to nodes but for the condition when there are more than one label with the most frequency for a node, NIBLPA calculates LI value and chooses the label with the most LI value. <br />
-    - At last,(in both algorithms) nodes with same labels are located in a unique community. <br />
+   - Sorts the nodes in a vector by their NI value(NI is obtained by KS value) <br />
+   - KS definition: It is assigned a k value to each node of the graph. Each node is located in a connected subgraph called k-shell in which each node has a minimum degree of k and can not be in a (k+1)-shell. <br />
+   - To calculate k value for each node, NIBLPA begins from KS = 0 and the value is increased one unit level by level. In each level, edges of nodes with maximum degree of KS are removed. Each node's k value equals to the value of KS at a level the node has lost its last edge. This process will continue untill all edges are removed. <br />
+   - NIBLPA works just like LPA in assigning labels to nodes but for the condition when there are more than one label with the most frequency for a node, NIBLPA calculates LI value and chooses the label with the most LI value. <br />
+   - At last,(in both algorithms) nodes with same labels are located in a unique community. <br />
     
     
 ## A brief explaination for methods used in the NIBLPA code <br />
